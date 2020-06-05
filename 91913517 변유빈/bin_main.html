@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>변유빈의 홈페이지</title>
+</head>
+<body>
+	<h1>변유빈의 홈페이지</h1>
+	<p id="time-result"></p>
+	중부대학교 91913517 정보보안학과<br>
+	<a href="mailto:bini30275@gmail.com">bini30275@gmail.com</a>
+	<hr align ="center"></hr><br>
+	<a href="bin_todo.html">> To-do list<br><br>
+	<a href="bin_pets.html">> Pets<br><br>
+</body>
+<script>
+	var d=new Date();
+	var currentDate=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일";
+	var result=document.getElementById("time-result");
+	result.innerHTML=currentDate;
+</script>
+</html>

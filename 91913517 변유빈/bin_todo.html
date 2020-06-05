@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<HTML>
+    <head>
+        <title>bin_todo</title>
+        <meta charset="UTF-8">
+        <script src="./Script.js"></script> 
+    </head>
+        <body>
+        <h1>To Do List</h1>
+        <hr align ="center"></hr>
+        <span id="todo">
+            <div class="listtitle"><h3> What to do :</h3></div>
+                <input id="valin" type="text" onkeydown="get_box();"/>
+             <div>    
+                <P id="inlist"></P>
+            </div>
+        </span>
+    </body>
+    <script>
+        function get_box(){
+            if(window.event.keyCode == 13){
+                var input = document.getElementById("valin").value;
+                var boxplus = document.createElement("input");
+                boxplus.type="checkbox";
+                boxplus.innerHTML = input;
+                document.getElementById("inlist").append(boxplus, input);
+                document.getElementById("valin").value = "";
+            }        
+        }
+    </script>
+</HTML>
